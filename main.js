@@ -9,15 +9,17 @@ $('#blurredContentFrame').css({
   'height': $('#frostedBk').height()
 });
 
-$('#blurredContent').css({
-  'width': $('#content').width(),
-  'height': $('#content').height()
-});
-
 $('#content').clone().appendTo('#blurredContent');
 
+sizeContent();
 positionBlur();
 
+function sizeContent() {
+  $('#blurredContent').css({
+    'width': $('#content').width(),
+    'height': $('#content').height()
+  });
+}
 
 function positionBlur() {
   offset = $('#frostedBk').offset();
@@ -58,3 +60,4 @@ $(document).on('mousemove', function(e) {
     positionBlur();
   }
 });
+$(window).on('resize', sizeContent);
