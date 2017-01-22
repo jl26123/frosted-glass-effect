@@ -1,8 +1,4 @@
-var offset,
-  fromBottom,
-  fromRight;
-
-$("body").append('<div id="blurredContentFrame"><div id="blurredContent"></div></div>');
+$(document.body).append('<div id="blurredContentFrame"><div id="blurredContent"></div></div>');
 
 $('#blurredContentFrame').css({
   'width': $('#frostedBk').width(),
@@ -22,7 +18,7 @@ function sizeContent() {
 }
 
 function positionBlur() {
-  offset = $('#frostedBk').offset();
+  var offset = $('#frostedBk').offset();
   $('#blurredContentFrame').css({
     'left': offset.left,
     'top': offset.top
