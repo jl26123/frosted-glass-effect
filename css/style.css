@@ -13,7 +13,7 @@ svg {
   width: 100%;
   position: absolute;
   background: url('mountains.jpg') no-repeat center center;
-  background-position: cover;
+  background-size: cover;
 }
 
 #text {
